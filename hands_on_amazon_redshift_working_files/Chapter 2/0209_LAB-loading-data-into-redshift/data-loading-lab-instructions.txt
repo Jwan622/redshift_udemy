@@ -113,7 +113,8 @@ select distinct(tablename) from pg_table_def where schemaname = 'public';
 
 // BASIC COPY COMMAND STRUCTURE
 copy table
-from 's3://richmorrow-5280/data-load/[KEY-PREFIX]'
+from 's3://redshift-jeff-wan-udemy
+/data-load/part-csv.tbl'
 credentials 'aws_access_key_id=AKIAITDF6KWO5JNU4IHQ;aws_secret_access_key=amONIGJxhAmyulvpYg8JHm+pHrgHuifL4RtAtQDA'
 options;
 
@@ -123,7 +124,7 @@ set wlm_query_slot_count to 2;
 // FOR YOUR SPECIFIC TABLES & BUCKET [THIS LOAD WILL FAIL]
 copy part
 from 's3://richmorrow-5280/data-load/part-csv.tbl'
-credentials 'aws_access_key_id=AKIAITDF6KWO5JNU4IHQ;aws_secret_access_key=amONIGJxhAmyulvpYg8JHm+pHrgHuifL4RtAtQDA';
+credentials 'aws_access_key_id=AKIAXQKKFHVYBBJPHZ2L;aws_secret_access_key=npnPta99C3QPENuDPcfFjuQ4HieF/zZIJQD+RVD/';
 
 // FOR YOUR SPECIFIC TABLES & BUCKET [THIS LOAD WILL SUCCEED]
 copy part
